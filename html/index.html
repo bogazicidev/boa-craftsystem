@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOA Craft Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="craft-container" class="hidden">
+        <div class="craft-panel">
+            <!-- Sol Panel (30%) -->
+            <div class="left-panel">
+                <div class="panel-header">
+                    <h2 id="location-name">Çalışma Tezgahı</h2>
+                    <button id="close-btn" class="close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <!-- Üret Butonu -->
+                <div class="craft-button-container">
+                    <button id="craft-button" class="craft-button" disabled>
+                        <i class="fas fa-hammer"></i>
+                        <span>ÜRET</span>
+                    </button>
+                </div>
+                
+                               <!-- Bildirim Alanı -->
+               <div class="notification-container">
+                   <div class="notification-box" id="notification-box">
+                       <div class="notification-content" id="notification-content">
+                           <!-- Bildirimler buraya gelecek -->
+                       </div>
+                   </div>
+               </div>
+               
+               <!-- Item Detay Box -->
+               <div class="item-detail-container" id="item-detail-container" style="display: none;">
+                   <div class="item-detail-box">
+                       <div class="item-detail-title" id="item-detail-title">Item Detayları</div>
+                       <div class="item-detail-content" id="item-detail-content">
+                           <!-- Item detayları buraya gelecek -->
+                       </div>
+                   </div>
+               </div>
+                
+                <div class="level-container">
+                    <!-- Üretim Süresi Kutusu -->
+                    <div class="production-info">
+                        <div class="production-header">
+                            <i class="fas fa-clock"></i>
+                            <span>Üretim süresi :</span>
+                        </div>
+                        <div class="production-timer">
+                            <div class="timer-bar">
+                                <div class="timer-fill" id="timer-fill"></div>
+                                <span class="timer-text" id="timer-text">Hazır</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="level-info">
+                        <div class="level-display">
+                            <span class="level-text">Level</span>
+                            <span id="player-level" class="level-number">1</span>
+                        </div>
+                        <div class="xp-bar">
+                            <div class="xp-fill" id="xp-fill"></div>
+                            <span class="xp-text" id="xp-text">0/100 XP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sağ Panel (70%) -->
+            <div class="right-panel">
+                <!-- Kategori ve Arama Alanı -->
+                <div class="search-filter-container">
+                    <div class="search-box">
+                        <input type="text" id="search-input" placeholder="Item ara..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="category-tabs" id="category-tabs">
+                        <button class="category-tab active" data-category="all">
+                            <i class="fas fa-th"></i>
+                            <span>Tümü</span>
+                        </button>
+                        <button class="category-tab" data-category="weapons">
+                            <i class="fas fa-gun"></i>
+                            <span>Silahlar</span>
+                        </button>
+                        <button class="category-tab" data-category="tools">
+                            <i class="fas fa-car"></i>
+                            <span>Araçlar</span>
+                        </button>
+                        <button class="category-tab" data-category="materials">
+                            <i class="fas fa-cube"></i>
+                            <span>Malzemeler</span>
+                        </button>
+                        <button class="category-tab" data-category="electronics">
+                            <i class="fas fa-microchip"></i>
+                            <span>Elektronik</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="craft-items" id="craft-items">
+                    <!-- Craft itemleri buraya dinamik olarak eklenecek -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
