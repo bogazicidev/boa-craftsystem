@@ -1,7 +1,7 @@
 # BOA-Craft Sistemi
 
 FiveM sunucunuz için gelişmiş bir craft sistemi. Oyuncular belirli konumlarda craft yapabilir, level atlayabilir ve çeşitli itemler üretebilir.
-
+Önizleme - Preview
 [![boa-craft](https://img.youtube.com/vi/3KJve4siROI/0.jpg)](https://www.youtube.com/watch?v=3KJve4siROI)
 
 ## Özellikler
